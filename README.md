@@ -1,4 +1,4 @@
-  # hexo github page blog 
+  #  hexo github page blog 
   
 
 > github  有个page show 貌似很秀的样子  
