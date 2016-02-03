@@ -228,30 +228,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git__u7684_u5E38_u7528_u547D_u4EE4"><a href="#git__u7684_u5E38_u7528_u547D_u4EE4" class="headerlink" title="git 的常用命令"></a>git 的常用命令</h1><blockquote>
-<p>git init  初始化</p>
-<p>1、git clone url  – 克隆</p>
-<p>2、git remote add origin url – 增加地址<br>  然后 git pull<br>本地与gihub的项目关联 无非只有两种情况 一种就是 gihub 有 而本地没有<br>用clone就行了 第二种就是 github 有 而我本地也有项目 而又想把本地的提交到github这个项目上 那就用第二种方法先关联<br>clone用在初始化项目<br>而2的方法把项目与github项目关联上然后就可以推送了</p>
-<h3 id="git_commit_-_m__u201Ctest_u201D"><a href="#git_commit_-_m__u201Ctest_u201D" class="headerlink" title="git commit - m “test”"></a>git commit - m “test”</h3><p>[-m] 这个参数 其实message就是提交日志</p>
-<h3 id="git_push_origin_master"><a href="#git_push_origin_master" class="headerlink" title="git push origin master"></a>git push origin master</h3><p>origin 就是上面1的origin  应该是url的别名的意思 要不然又要打一串的地址<br>master 就是主分支</p>
-<h3 id="u521B_u5EFA_u5206_u652F"><a href="#u521B_u5EFA_u5206_u652F" class="headerlink" title="创建分支"></a>创建分支</h3><p>创建一个叫做”dev”的分支，并切换过去：<br>git checkout -b dev</p>
-<h3 id="u5220_u9664_u5206_u652F"><a href="#u5220_u9664_u5206_u652F" class="headerlink" title="删除分支"></a>删除分支</h3><p>要切换另一个分支 才能删除<br>git checkout master<br>git branch -d dev</p>
-<h3 id="u5408_u5E76_u5206_u652F"><a href="#u5408_u5E76_u5206_u652F" class="headerlink" title="合并分支"></a>合并分支</h3><p>如果上面的分支删的话就可以切换主分支<br>要合并其他分支到你的当前分支（如 master）<br>git checkout master<br>git merge dev</p>
-<h3 id="u63A8_u9001_u5206_u652F_u5230github_u53BB"><a href="#u63A8_u9001_u5206_u652F_u5230github_u53BB" class="headerlink" title="推送分支到github去"></a>推送分支到github去</h3><p>除非你将分支推送到远端仓库，不然该分支只能你单机玩了别人是不能陪你玩了<br>git push origin dev</p>
-<h3 id="u51B2_u7A81_uFF08conflicts_uFF09"><a href="#u51B2_u7A81_uFF08conflicts_uFF09" class="headerlink" title="冲突（conflicts）"></a>冲突（conflicts）</h3><p>这个肯定 是有的 用对比工具看看或者手动改掉<br>git &lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容<br>预览差异<br>git diff 【source_branch&gt; <target_branch>】</target_branch></p>
-<h3 id="u6807_u7B7E"><a href="#u6807_u7B7E" class="headerlink" title="标签"></a>标签</h3><p>git tag 1.0.0 kd12313213</p>
-<h3 id="u5E38_u7528_u7684"><a href="#u5E38_u7528_u7684" class="headerlink" title="常用的"></a>常用的</h3><pre><code>git pull origin master
-git add *
-git commit -m &quot;test&quot;    
-git push 
-</code></pre></blockquote>
-<h1 id="u63A8_u8350_u7684git__u597D_u7528_u7684_u56FE_u5F62_u5316_u5DE5_u5177"><a href="#u63A8_u8350_u7684git__u597D_u7528_u7684_u56FE_u5F62_u5316_u5DE5_u5177" class="headerlink" title="推荐的git 好用的图形化工具"></a>推荐的git 好用的图形化工具</h1><h3 id="u611F_u89C9_u7528_u547D_u4EE4_u6572_u903C_u683C_u662F_u8981_u9AD8_u70B9__u4F46_u662F_u6211_u8FD8_u662F_u559C_u6B22_u7528_u5DE5_u5177_u6211_u7528_u7684_u5C31_u662FTortoiseGit"><a href="#u611F_u89C9_u7528_u547D_u4EE4_u6572_u903C_u683C_u662F_u8981_u9AD8_u70B9__u4F46_u662F_u6211_u8FD8_u662F_u559C_u6B22_u7528_u5DE5_u5177_u6211_u7528_u7684_u5C31_u662FTortoiseGit" class="headerlink" title="感觉用命令敲逼格是要高点 但是我还是喜欢用工具我用的就是TortoiseGit"></a>感觉用命令敲逼格是要高点 但是我还是喜欢用工具我用的就是TortoiseGit</h3><h3 id="u79D2_u6740_u603B_u7ED3"><a href="#u79D2_u6740_u603B_u7ED3" class="headerlink" title="秒杀总结"></a>秒杀总结</h3><pre><code>SSH key 的使用
-随便看一个完整的git项目 看看.git/config 文件一目了然，你就会发现所谓的工具就是这么玩的
-然后抄一下 
-</code></pre><h4 id="u63D0_u4F9B_u5B66_u4E60_u53C2_u8003_u7684_u94FE_u63A5"><a href="#u63D0_u4F9B_u5B66_u4E60_u53C2_u8003_u7684_u94FE_u63A5" class="headerlink" title="提供学习参考的链接"></a>提供学习参考的链接</h4><blockquote>
-<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a><br><a href="http://www.worldhello.net/gotgithub/" target="_blank" rel="external">http://www.worldhello.net/gotgithub/</a><br><a href="http://blog.jobbole.com/23398/" target="_blank" rel="external">http://blog.jobbole.com/23398/</a></p>
-</blockquote>
-
+        <h1 id="git__u7684_u5E38_u7528_u547D_u4EE4_MD_showTime"><a href="#git__u7684_u5E38_u7528_u547D_u4EE4_MD_showTime" class="headerlink" title="git 的常用命令 MD showTime"></a>git 的常用命令 MD showTime</h1>
       
     </div>
     
@@ -264,6 +241,10 @@ git push
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/03/github-git手记/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
